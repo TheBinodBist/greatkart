@@ -114,9 +114,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = BASE_DIR / 'static'
+STATIC_URL = '/static/'
 
+# ✅ destination (DO NOT put this in STATICFILES_DIRS)
+STATIC_ROOT = BASE_DIR / 'greatkart' / 'static'
+
+# ✅ source (ONLY this)
 STATICFILES_DIRS = [
-    'greatkart / static',
+    BASE_DIR / 'static',
 ]
